@@ -1,0 +1,16 @@
+Function 'main'
+Lines executed:100.00% of 8
+
+Function 'my_algebra'
+Lines executed:60.00% of 5
+
+Function 'sub'
+Lines executed:0.00% of 2
+
+Function 'add'
+Lines executed:100.00% of 2
+
+File 'arithmetic.c'
+Lines executed:76.47% of 17
+Creating 'arithmetic.c.gcov'
+
