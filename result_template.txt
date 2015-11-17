@@ -1,55 +1,55 @@
 
 
 <arithmetic></add><arithmetic/>     :int add(int x, int y)
-<arithmetic></add><arithmetic/>     :{
+                                    :{
 <arithmetic></add><arithmetic/>     :   return x + y;    
-<arithmetic></add><arithmetic/>     :}
+                                    :}
 
 ---
 
 function: add
 features: arithmetic
-            ->add: 4 / 4
+            ->add:( 2 / 2 )
 
 ---
 
 <arithmetic></sub><arithmetic/>     :int sub(int x, int y)
-<arithmetic></sub><arithmetic/>     :{
+                                    :{
 <arithmetic></sub><arithmetic/>     :   return x - y;    
-<arithmetic></sub><arithmetic/>     :}
+                                    :}
 
 ---
 
 function: sub
 features: arithmetic (1) 
-            ->sub: (4 / 4)
+            ->sub: ( 2 / 2)
 
 ---
 
 <arithmetic></add></sub><arithmetic/>:int my_algebra(int op, int x, int y)
-<arithmetic></add></sub><arithmetic/>:{
+                                     :{
 <arithmetic></add></sub><arithmetic/>:  switch(op)
-<arithmetic></add></sub><arithmetic/>:  {
-<arithmetic></add><arithmetic/>      :      case ADD:
+                                     :  {
+                                     :      case ARITH_ADD:
 <arithmetic></add><arithmetic/>      :          return add(x,y);
-<arithmetic></sub><arithmetic/>      :      case SUB:
+                                     :      case ARITH_SUB:
 <arithmetic></sub><arithmetic/>      :          return sub(x,y);
 #####                                :      default: return -1;     
-<arithmetic></add></sub><arithmetic/>:   }
-<arithmetic></add></sub><arithmetic/>:}
+                                     :   }
+                                     :}
 
 ---
 
 function: my_algebra
 features: arithmetic (2)
-            ->sub: (8 / 11)
-            ->add: (8 / 11)
+            ->sub: (3 / 5)
+            ->add: (3 / 5)
 
 ----
 
 file: arithmetic.c
 features: arithmetic (2)
-            ->add: (12/19)
-            ->sub: (12/19)
+            ->add: (13/17)
+            ->sub: (13/17)
 
 
