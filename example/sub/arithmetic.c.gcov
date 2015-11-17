@@ -1,0 +1,50 @@
+        -:    0:Source:arithmetic.c
+        -:    0:Graph:arithmetic.gcno
+        -:    0:Data:arithmetic.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:
+        -:    3:typedef enum 
+        -:    4:{
+        -:    5:    ARITH_ADD = 0,
+        -:    6:    ARITH_SUB,
+        -:    7:    N_ARITH
+        -:    8:} arith_operations;
+        -:    9:
+    #####:   10:int add(int x, int y)
+        -:   11:{
+    #####:   12:   return x + y;    
+        -:   13:}
+        -:   14:
+        1:   15:int sub(int x, int y)
+        -:   16:{
+        1:   17:    return x - y;    
+        -:   18:}
+        -:   19:
+        1:   20:int my_algebra(int op, int x, int y)
+        -:   21:{
+        1:   22:  switch(op)
+        -:   23:  {
+        -:   24:      case ARITH_ADD:
+    #####:   25:          return add(x,y);
+        -:   26:      case ARITH_SUB:
+        1:   27:          return sub(x,y);
+    #####:   28:      default: return -1;     
+        -:   29:  }
+        -:   30:}
+        -:   31:
+        1:   32:int main(int argc, char * argv[])
+        -:   33:{
+        1:   34:    int result = -1;
+        1:   35:    if(argc==4)
+        -:   36:    {
+        1:   37:        int op = atoi(argv[1]);
+        -:   38:    
+        1:   39:        int x =  atoi(argv[2]);
+        1:   40:        int y =  atoi(argv[3]);
+        -:   41:
+        1:   42:       printf("%d\n",my_algebra(op, x,y));
+        -:   43:    }
+        -:   44:        
+        1:   45:}
